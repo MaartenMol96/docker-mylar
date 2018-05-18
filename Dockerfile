@@ -4,13 +4,14 @@ FROM lsiobase/alpine.python:3.7
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="sparklyballs"
+LABEL maintainer="MaartenMol96"
 
 RUN \
  echo "**** install pip packages ****" && \
  pip install --no-cache-dir -U \
 	comictagger \
 	configparser \
+	html5lib
 	tzlocal && \
  echo "**** install app ****" && \
  git clone --depth 1 https://github.com/evilhero/mylar.git /app/mylar && \
