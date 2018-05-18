@@ -11,7 +11,7 @@ RUN \
  pip install --no-cache-dir -U \
 	comictagger \
 	configparser \
-	html5lib
+	html5lib \
 	tzlocal && \
  echo "**** install app ****" && \
  git clone --depth 1 https://github.com/evilhero/mylar.git /app/mylar && \
